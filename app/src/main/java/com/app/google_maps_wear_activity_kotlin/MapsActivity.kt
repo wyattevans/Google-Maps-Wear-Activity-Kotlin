@@ -1,21 +1,18 @@
 package com.app.google_maps_wear_activity_kotlin
 
+import android.os.Bundle
+import android.support.wearable.activity.WearableActivity
+import android.view.Gravity
+import android.view.View
+import android.widget.FrameLayout
+import android.widget.Toast
+import androidx.wear.widget.SwipeDismissFrameLayout
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapFragment
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-
-import android.os.Bundle
-import androidx.wear.widget.SwipeDismissFrameLayout
-import android.support.wearable.activity.WearableActivity
-import android.view.Gravity
-import android.view.View
-import android.view.WindowInsets
-import android.widget.FrameLayout
-import android.widget.Toast
-
 import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : WearableActivity(), OnMapReadyCallback {
@@ -59,7 +56,7 @@ class MapsActivity : WearableActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         val duration = Toast.LENGTH_LONG
-        val toast = Toast.makeText(getApplicationContext(), R.string.intro_text, duration)
+        val toast = Toast.makeText(applicationContext, R.string.intro_text, duration)
         toast.setGravity(Gravity.CENTER, 0, 0)
         toast.show()
 
