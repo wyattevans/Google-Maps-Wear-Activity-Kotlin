@@ -56,7 +56,7 @@ class MapsActivity : WearableActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         val duration = Toast.LENGTH_LONG
-        val toast = Toast.makeText(getApplicationContext(), R.string.intro_text, duration)
+        val toast = Toast.makeText(applicationContext, R.string.intro_text, duration)
         toast.setGravity(Gravity.CENTER, 0, 0)
         toast.show()
 
